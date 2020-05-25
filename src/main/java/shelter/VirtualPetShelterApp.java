@@ -37,7 +37,8 @@ public class VirtualPetShelterApp<userSelection> {
                     "Press 4 if you'd like to enter a particular pet name in order to retrieve  said pet's description. \n" +
                     "Press 5 if you'd like to adopt a Pet.\n" +
                     "Press 6 if you would like to admit a pet to the Shelter. \n" +
-                    "Press 7 if you would like to play with a particular pet inside of the shelter" +
+                    "Press 7 if you would like to play with a particular pet inside of the shelter. \n" +
+                    "Press 8 to print the name and descriptions of all pets in the shelter \n" +
                     " If you would like to exit press -1");
             userSelection = scanner.nextLine();
 
@@ -83,20 +84,21 @@ public class VirtualPetShelterApp<userSelection> {
                 myShelter.playWithSinglePet(petName);
 
             }
+            else if (userSelection.equals("8")){
+                System.out.println(myShelter.myPetList);
+            }
             else if (userSelection.equals("-1")){
                 System.out.println("Goodbye");
                 System.exit(-1);
             }
-//            printPetStatus(myShelter);
+
             myShelter.tick();
         }
     }
 
     private static void printPetStatus(VirtualPetShelter shelter) {
         System.out.println("This is the status of your pets: ");
-//        for (VirtualPet pet : shelter.myPetList.values()) {
-//            System.out.println(pet);
-//            System.out.println("");
+
 
             Collection<VirtualPet> pets = shelter.showAllPets();
             for (VirtualPet pet : pets)

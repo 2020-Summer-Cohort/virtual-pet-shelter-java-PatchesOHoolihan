@@ -58,10 +58,7 @@ public class VirtualPetShelter {
     }
 
 
-    //    public String listAllPets() {
-//        Set<String> petNames = myPetList.keySet();
-//        System.out.println("The pet names are " + petNames);
-//
+
     public Set<String> retrieveAllPetNames() {
 
         return myPetList.keySet();

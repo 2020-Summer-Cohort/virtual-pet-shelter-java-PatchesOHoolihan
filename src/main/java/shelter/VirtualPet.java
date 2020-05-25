@@ -77,6 +77,6 @@ public class VirtualPet {
         boredomLevel = boredomLevel + 10;
     }
 }
-//Add Tick to be called by Shelter
+
 
 
